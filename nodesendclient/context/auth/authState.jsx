@@ -35,6 +35,7 @@ const AuthState = ({children}) => {
                 payload: respuesta.data.msg
             });
         } catch (error) {
+            console.log(error);
             dispatch({
                 type: USUARIO_YA_EXISTE,
                 payload: error.response.data.msg

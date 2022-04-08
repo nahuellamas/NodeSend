@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
   env: {
-    backendURL: 'http://localhost:4500',
-    frontendURL: 'http://localhost:3000',
+    backendURL: 'https://send-node-api.herokuapp.com/',
+    frontendURL: 'https://nodesendclient-tawny.vercel.app/',
   }
 }
+
 
 module.exports = nextConfig

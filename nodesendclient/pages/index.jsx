@@ -26,8 +26,8 @@ export default function Home() {
 
         {url ? (
           <>
-          <p className="text-center text-clamp font-bold mt-10"><span className="text-redline uppercase">Tu enlace es:</span> {`${process.env.frontendURL}/enlaces/${url}`}</p>
-          <button onClick={() => {navigator.clipboard.writeText(`${process.env.frontendURL}/enlaces/${url}`)}} type="button" className="mt-10 bg-redline w-full py-3 px-5 rounded text-white hover:bg-black ease-in-out duration-300 uppercase font-bold">
+          <p className="text-center text-clamp font-bold mt-10"><span className="text-redline uppercase">Tu enlace es:</span> {`${process.env.frontendURL}enlaces/${url}`}</p>
+          <button onClick={() => {navigator.clipboard.writeText(`${process.env.frontendURL}enlaces/${url}`)}} type="button" className="mt-10 bg-redline w-full py-3 px-5 rounded text-white hover:bg-black ease-in-out duration-300 uppercase font-bold">
             Copiar Enlace
           </button>
           </>

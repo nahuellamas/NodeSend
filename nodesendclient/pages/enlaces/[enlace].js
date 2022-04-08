@@ -69,7 +69,7 @@ const Enlaces = ({enlace}) => {
             <>
                 <h1 className="text-redline text-clamp text-center">Descargar archivo compartido:</h1>
                 <div className="flex items-center justify-center mt-5">
-                    <a href={`${process.env.backendURL}/api/archivos/${enlace.archivo}`} className="bg-redline hover:bg-red-700 hover:cursor-pointer text-white font-bold py-2 px-4 rounded uppercase">Descargar</a>
+                    <a href={`${process.env.backendURL}api/archivos/${enlace.archivo}`} className="bg-redline hover:bg-red-700 hover:cursor-pointer text-white font-bold py-2 px-4 rounded uppercase">Descargar</a>
                 </div>
             </> 
             )}

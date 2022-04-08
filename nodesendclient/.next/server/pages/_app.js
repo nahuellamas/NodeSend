@@ -20,7 +20,7 @@ var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_n
 ;// CONCATENATED MODULE: ./config/axios.jsx
 
 const clientAxios = external_axios_default().create({
-    baseURL: "http://localhost:4500"
+    baseURL: "https://send-node-api.herokuapp.com/"
 });
 /* harmony default export */ const axios = (clientAxios);
 
@@ -178,6 +178,7 @@ const AuthState = ({ children  })=>{
                 payload: respuesta.data.msg
             });
         } catch (error) {
+            console.log(error);
             dispatch({
                 type: USUARIO_YA_EXISTE,
                 payload: error.response.data.msg

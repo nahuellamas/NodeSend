@@ -4,14 +4,15 @@ const cors = require('cors');
 
 // crear el servidor
 const app = express();
-// Conectar a la base de datos
-conectarDB();
-
-// Habilitar Cors
-const opcionesCors = {
-    origin: process.env.FRONTEND_URL
+// Habilitar CORS
+var corsOptions = {
+    origin: process.env.FRONTEND_URL,
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
-app.use( cors(opcionesCors) );
+app.options('*', cors())
+app.use(cors(corsOptions));
+
+conectarDB();
 
 // Puerto de la app
 const port = process.env.PORT || 4500;

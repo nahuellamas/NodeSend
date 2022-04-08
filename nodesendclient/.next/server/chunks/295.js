@@ -76,9 +76,8 @@ const Header = ()=>{
     const { limpiarState  } = AppContext;
     (0,external_react_.useEffect)(()=>{
         obtenerUsuario();
-    }, [
-        obtenerUsuario
-    ]);
+    // eslint-disable-next-line
+    }, []);
     const redirect = ()=>{
         router.push('/');
         limpiarState();

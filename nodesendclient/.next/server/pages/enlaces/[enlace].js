@@ -20,7 +20,7 @@ var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_n
 ;// CONCATENATED MODULE: ./config/axios.jsx
 
 const clientAxios = external_axios_default().create({
-    baseURL: "http://localhost:4500"
+    baseURL: "https://send-node-api.herokuapp.com/"
 });
 /* harmony default export */ const axios = (clientAxios);
 
@@ -147,7 +147,7 @@ const Enlaces = ({ enlace  })=>{
                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                     className: "flex items-center justify-center mt-5",
                     children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("a", {
-                        href: `${"http://localhost:4500"}/api/archivos/${enlace.archivo}`,
+                        href: `${"https://send-node-api.herokuapp.com/"}api/archivos/${enlace.archivo}`,
                         className: "bg-redline hover:bg-red-700 hover:cursor-pointer text-white font-bold py-2 px-4 rounded uppercase",
                         children: "Descargar"
                     })

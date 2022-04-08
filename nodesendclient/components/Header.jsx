@@ -17,7 +17,8 @@ const Header = () => {
 
   useEffect(() => {
     obtenerUsuario();
-  }, [obtenerUsuario]);
+    // eslint-disable-next-line
+  }, []);
 
   const redirect = () => {
     router.push('/')
