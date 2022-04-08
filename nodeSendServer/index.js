@@ -7,7 +7,8 @@ const app = express();
 // Habilitar CORS
 var corsOptions = {
     origin: process.env.FRONTEND_URL,
-    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+    optionsSuccessStatus: 200,
+    credentials: true
 }
 app.options('*', cors())
 app.use(cors(corsOptions));

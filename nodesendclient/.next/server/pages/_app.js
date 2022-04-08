@@ -1,461 +1,167 @@
-"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 888;
-exports.ids = [888];
+exports.id = "pages/_app";
+exports.ids = ["pages/_app"];
 exports.modules = {
 
-/***/ 5908:
+/***/ "./config/axios.jsx":
+/*!**************************!*\
+  !*** ./config/axios.jsx ***!
+  \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ \"axios\");\n/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);\n\nconst clientAxios = axios__WEBPACK_IMPORTED_MODULE_0___default().create({\n    baseURL: \"http://localhost:4500/\"\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (clientAxios);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb25maWcvYXhpb3MuanN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUF5QjtBQUV6QixLQUFLLENBQUNDLFdBQVcsR0FBR0QsbURBQVksQ0FBQyxDQUFDO0lBQzlCRyxPQUFPLEVBQUVDLHdCQUFzQjtBQUNuQyxDQUFDO0FBRUQsaUVBQWVILFdBQVcsRUFBQyIsInNvdXJjZXMiOlsid2VicGFjazovL25vZGVzZW5kY2xpZW50Ly4vY29uZmlnL2F4aW9zLmpzeD83ZDE0Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBheGlvcyBmcm9tICdheGlvcyc7XHJcblxyXG5jb25zdCBjbGllbnRBeGlvcyA9IGF4aW9zLmNyZWF0ZSh7XHJcbiAgICBiYXNlVVJMOiBwcm9jZXNzLmVudi5iYWNrZW5kVVJMXHJcbn0pO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgY2xpZW50QXhpb3M7Il0sIm5hbWVzIjpbImF4aW9zIiwiY2xpZW50QXhpb3MiLCJjcmVhdGUiLCJiYXNlVVJMIiwicHJvY2VzcyIsImVudiIsImJhY2tlbmRVUkwiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./config/axios.jsx\n");
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ axios)
-});
+/***/ }),
 
-;// CONCATENATED MODULE: external "axios"
-const external_axios_namespaceObject = require("axios");
-var external_axios_default = /*#__PURE__*/__webpack_require__.n(external_axios_namespaceObject);
-;// CONCATENATED MODULE: ./config/axios.jsx
+/***/ "./config/tokenAuth.jsx":
+/*!******************************!*\
+  !*** ./config/tokenAuth.jsx ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-const clientAxios = external_axios_default().create({
-    baseURL: "https://send-node-api.herokuapp.com/"
-});
-/* harmony default export */ const axios = (clientAxios);
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./axios */ \"./config/axios.jsx\");\n\nconst tokenAuth = (token)=>{\n    if (token) {\n        _axios__WEBPACK_IMPORTED_MODULE_0__[\"default\"].defaults.headers.common.Authorization = `Bearer ${token}`;\n    } else {\n        delete _axios__WEBPACK_IMPORTED_MODULE_0__[\"default\"].defaults.headers.common.Authorization;\n    }\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tokenAuth);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb25maWcvdG9rZW5BdXRoLmpzeC5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQUFpQztBQUVqQyxLQUFLLENBQUNDLFNBQVMsSUFBR0MsS0FBSyxHQUFJLENBQUM7SUFDeEIsRUFBRSxFQUFFQSxLQUFLLEVBQUUsQ0FBQztRQUNSRixvRkFBbUQsSUFBSyxPQUFPLEVBQUVFLEtBQUs7SUFDMUUsQ0FBQyxNQUFNLENBQUM7UUFDSixNQUFNLENBQUNGLG9GQUFtRDtJQUM5RCxDQUFDO0FBQ0wsQ0FBQztBQUVELGlFQUFlQyxTQUFTLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ub2Rlc2VuZGNsaWVudC8uL2NvbmZpZy90b2tlbkF1dGguanN4P2JiNWIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGNsaWVudEF4aW9zIGZyb20gXCIuL2F4aW9zXCI7XHJcblxyXG5jb25zdCB0b2tlbkF1dGggPSB0b2tlbiA9PiB7XHJcbiAgICBpZiAodG9rZW4pIHtcclxuICAgICAgICBjbGllbnRBeGlvcy5kZWZhdWx0cy5oZWFkZXJzLmNvbW1vbltcIkF1dGhvcml6YXRpb25cIl0gPSBgQmVhcmVyICR7dG9rZW59YDtcclxuICAgIH0gZWxzZSB7XHJcbiAgICAgICAgZGVsZXRlIGNsaWVudEF4aW9zLmRlZmF1bHRzLmhlYWRlcnMuY29tbW9uW1wiQXV0aG9yaXphdGlvblwiXTtcclxuICAgIH1cclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgdG9rZW5BdXRoOyJdLCJuYW1lcyI6WyJjbGllbnRBeGlvcyIsInRva2VuQXV0aCIsInRva2VuIiwiZGVmYXVsdHMiLCJoZWFkZXJzIiwiY29tbW9uIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./config/tokenAuth.jsx\n");
+
+/***/ }),
+
+/***/ "./context/app/appContext.jsx":
+/*!************************************!*\
+  !*** ./context/app/appContext.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nconst appContext = /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (appContext);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb250ZXh0L2FwcC9hcHBDb250ZXh0LmpzeC5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7QUFBcUM7QUFFckMsS0FBSyxDQUFDQyxVQUFVLGlCQUFHRCxvREFBYTtBQUVoQyxpRUFBZUMsVUFBVSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbm9kZXNlbmRjbGllbnQvLi9jb250ZXh0L2FwcC9hcHBDb250ZXh0LmpzeD8xODk3Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGNyZWF0ZUNvbnRleHQgfSBmcm9tIFwicmVhY3RcIjtcclxuXHJcbmNvbnN0IGFwcENvbnRleHQgPSBjcmVhdGVDb250ZXh0KCk7XHJcblxyXG5leHBvcnQgZGVmYXVsdCBhcHBDb250ZXh0OyJdLCJuYW1lcyI6WyJjcmVhdGVDb250ZXh0IiwiYXBwQ29udGV4dCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./context/app/appContext.jsx\n");
+
+/***/ }),
+
+/***/ "./context/app/appReducer.jsx":
+/*!************************************!*\
+  !*** ./context/app/appReducer.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../types */ \"./types/index.jsx\");\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((state, action)=>{\n    switch(action.type){\n        case _types__WEBPACK_IMPORTED_MODULE_0__.MOSTRAR_ALERTA:\n            return {\n                ...state,\n                mensaje_archivo: action.payload\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.LIMPIAR_ALERTA:\n            return {\n                ...state,\n                mensaje_archivo: null\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.SUBIENDO_ARCHIVO:\n            return {\n                ...state,\n                cargando: true\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.SUBIR_ARCHIVO_EXITO:\n            return {\n                ...state,\n                nombre: action.payload.nombre,\n                nombre_original: action.payload.nombre_original,\n                cargando: false\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.SUBIR_ARCHIVO_ERROR:\n            return {\n                ...state,\n                mensaje_archivo: action.payload,\n                cargando: false\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.CREAR_ENLACE_EXITO:\n            return {\n                ...state,\n                url: action.payload\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.LIMPIAR_STATE:\n            return {\n                ...state,\n                mensaje_archivo: null,\n                nombre: '',\n                nombre_original: '',\n                cargando: false,\n                descargas: 1,\n                password: '',\n                autor: null,\n                url: ''\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.AGREGAR_PASSWORD:\n            return {\n                ...state,\n                password: action.payload\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.AGREGAR_DESCARGAS:\n            return {\n                ...state,\n                descargas: action.payload\n            };\n        default:\n            return state;\n    }\n});\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb250ZXh0L2FwcC9hcHBSZWR1Y2VyLmpzeC5qcyIsIm1hcHBpbmdzIjoiOzs7OztBQVdvQjtBQUdwQixpRUFBZ0IsQ0FBQVUsS0FBSyxFQUFFQyxNQUFNLEdBQUssQ0FBQztJQUMvQixNQUFNLENBQUVBLE1BQU0sQ0FBQ0MsSUFBSTtRQUNmLElBQUksQ0FBQ1osa0RBQWM7WUFDZixNQUFNLENBQUMsQ0FBQzttQkFDRFUsS0FBSztnQkFDUkcsZUFBZSxFQUFFRixNQUFNLENBQUNHLE9BQU87WUFDbkMsQ0FBQztRQUNMLElBQUksQ0FBQ2Isa0RBQWM7WUFDZixNQUFNLENBQUMsQ0FBQzttQkFDRFMsS0FBSztnQkFDUkcsZUFBZSxFQUFFLElBQUk7WUFDekIsQ0FBQztRQUNMLElBQUksQ0FBQ1Qsb0RBQWdCO1lBQ2pCLE1BQU0sQ0FBQyxDQUFDO21CQUNETSxLQUFLO2dCQUNSSyxRQUFRLEVBQUUsSUFBSTtZQUNsQixDQUFDO1FBQ0wsSUFBSSxDQUFDYix1REFBbUI7WUFDcEIsTUFBTSxDQUFDLENBQUM7bUJBQ0RRLEtBQUs7Z0JBQ1JNLE1BQU0sRUFBRUwsTUFBTSxDQUFDRyxPQUFPLENBQUNFLE1BQU07Z0JBQzdCQyxlQUFlLEVBQUVOLE1BQU0sQ0FBQ0csT0FBTyxDQUFDRyxlQUFlO2dCQUMvQ0YsUUFBUSxFQUFFLEtBQUs7WUFDbkIsQ0FBQztRQUNMLElBQUksQ0FBQ1osdURBQW1CO1lBQ3BCLE1BQU0sQ0FBQyxDQUFDO21CQUNETyxLQUFLO2dCQUNSRyxlQUFlLEVBQUVGLE1BQU0sQ0FBQ0csT0FBTztnQkFDL0JDLFFBQVEsRUFBRSxLQUFLO1lBQ25CLENBQUM7UUFDTCxJQUFJLENBQUNWLHNEQUFrQjtZQUNuQixNQUFNLENBQUMsQ0FBQzttQkFDREssS0FBSztnQkFDUlEsR0FBRyxFQUFFUCxNQUFNLENBQUNHLE9BQU87WUFDdkIsQ0FBQztRQUNMLElBQUksQ0FBQ1AsaURBQWE7WUFDZCxNQUFNLENBQUMsQ0FBQzttQkFDREcsS0FBSztnQkFDUkcsZUFBZSxFQUFFLElBQUk7Z0JBQ3JCRyxNQUFNLEVBQUUsQ0FBRTtnQkFDVkMsZUFBZSxFQUFFLENBQUU7Z0JBQ25CRixRQUFRLEVBQUUsS0FBSztnQkFDZkksU0FBUyxFQUFFLENBQUM7Z0JBQ1pDLFFBQVEsRUFBRSxDQUFFO2dCQUNaQyxLQUFLLEVBQUUsSUFBSTtnQkFDWEgsR0FBRyxFQUFFLENBQUU7WUFDWCxDQUFDO1FBQ0wsSUFBSSxDQUFDVixvREFBZ0I7WUFDakIsTUFBTSxDQUFDLENBQUM7bUJBQ0RFLEtBQUs7Z0JBQ1JVLFFBQVEsRUFBRVQsTUFBTSxDQUFDRyxPQUFPO1lBQzVCLENBQUM7UUFDTCxJQUFJLENBQUNMLHFEQUFpQjtZQUNsQixNQUFNLENBQUMsQ0FBQzttQkFDREMsS0FBSztnQkFDUlMsU0FBUyxFQUFFUixNQUFNLENBQUNHLE9BQU87WUFDN0IsQ0FBQzs7WUFFRCxNQUFNLENBQUNKLEtBQUs7O0FBRXhCLENBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ub2Rlc2VuZGNsaWVudC8uL2NvbnRleHQvYXBwL2FwcFJlZHVjZXIuanN4P2NmMzEiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtcclxuICAgIE1PU1RSQVJfQUxFUlRBLFxyXG4gICAgTElNUElBUl9BTEVSVEEsXHJcbiAgICBTVUJJUl9BUkNISVZPX0VYSVRPLFxyXG4gICAgU1VCSVJfQVJDSElWT19FUlJPUixcclxuICAgIFNVQklFTkRPX0FSQ0hJVk8sXHJcbiAgICBDUkVBUl9FTkxBQ0VfRVhJVE8sXHJcbiAgICBDUkVBUl9FTkxBQ0VfRVJST1IsXHJcbiAgICBMSU1QSUFSX1NUQVRFLFxyXG4gICAgQUdSRUdBUl9QQVNTV09SRCxcclxuICAgIEFHUkVHQVJfREVTQ0FSR0FTXHJcbn0gZnJvbSAnLi4vLi4vdHlwZXMnO1xyXG5cclxuXHJcbmV4cG9ydCBkZWZhdWx0IChzdGF0ZSwgYWN0aW9uKSA9PiB7XHJcbiAgICBzd2l0Y2ggKGFjdGlvbi50eXBlKSB7XHJcbiAgICAgICAgY2FzZSBNT1NUUkFSX0FMRVJUQTpcclxuICAgICAgICAgICAgcmV0dXJuIHtcclxuICAgICAgICAgICAgICAgIC4uLnN0YXRlLFxyXG4gICAgICAgICAgICAgICAgbWVuc2FqZV9hcmNoaXZvOiBhY3Rpb24ucGF5bG9hZCxcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIGNhc2UgTElNUElBUl9BTEVSVEE6XHJcbiAgICAgICAgICAgIHJldHVybiB7XHJcbiAgICAgICAgICAgICAgICAuLi5zdGF0ZSxcclxuICAgICAgICAgICAgICAgIG1lbnNhamVfYXJjaGl2bzogbnVsbFxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgY2FzZSBTVUJJRU5ET19BUkNISVZPOlxyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXHJcbiAgICAgICAgICAgICAgICBjYXJnYW5kbzogdHJ1ZVxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgY2FzZSBTVUJJUl9BUkNISVZPX0VYSVRPOlxyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXHJcbiAgICAgICAgICAgICAgICBub21icmU6IGFjdGlvbi5wYXlsb2FkLm5vbWJyZSxcclxuICAgICAgICAgICAgICAgIG5vbWJyZV9vcmlnaW5hbDogYWN0aW9uLnBheWxvYWQubm9tYnJlX29yaWdpbmFsLFxyXG4gICAgICAgICAgICAgICAgY2FyZ2FuZG86IGZhbHNlXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBjYXNlIFNVQklSX0FSQ0hJVk9fRVJST1I6XHJcbiAgICAgICAgICAgIHJldHVybiB7XHJcbiAgICAgICAgICAgICAgICAuLi5zdGF0ZSxcclxuICAgICAgICAgICAgICAgIG1lbnNhamVfYXJjaGl2bzogYWN0aW9uLnBheWxvYWQsXHJcbiAgICAgICAgICAgICAgICBjYXJnYW5kbzogZmFsc2VcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIGNhc2UgQ1JFQVJfRU5MQUNFX0VYSVRPOlxyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXHJcbiAgICAgICAgICAgICAgICB1cmw6IGFjdGlvbi5wYXlsb2FkXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBjYXNlIExJTVBJQVJfU1RBVEU6XHJcbiAgICAgICAgICAgIHJldHVybiB7XHJcbiAgICAgICAgICAgICAgICAuLi5zdGF0ZSxcclxuICAgICAgICAgICAgICAgIG1lbnNhamVfYXJjaGl2bzogbnVsbCxcclxuICAgICAgICAgICAgICAgIG5vbWJyZTogJycsXHJcbiAgICAgICAgICAgICAgICBub21icmVfb3JpZ2luYWw6ICcnLFxyXG4gICAgICAgICAgICAgICAgY2FyZ2FuZG86IGZhbHNlLFxyXG4gICAgICAgICAgICAgICAgZGVzY2FyZ2FzOiAxLFxyXG4gICAgICAgICAgICAgICAgcGFzc3dvcmQ6ICcnLFxyXG4gICAgICAgICAgICAgICAgYXV0b3I6IG51bGwsXHJcbiAgICAgICAgICAgICAgICB1cmw6ICcnLFxyXG4gICAgICAgICAgICB9XHJcbiAgICAgICAgY2FzZSBBR1JFR0FSX1BBU1NXT1JEOlxyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXHJcbiAgICAgICAgICAgICAgICBwYXNzd29yZDogYWN0aW9uLnBheWxvYWRcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIGNhc2UgQUdSRUdBUl9ERVNDQVJHQVM6XHJcbiAgICAgICAgICAgIHJldHVybiB7XHJcbiAgICAgICAgICAgICAgICAuLi5zdGF0ZSxcclxuICAgICAgICAgICAgICAgIGRlc2NhcmdhczogYWN0aW9uLnBheWxvYWRcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIGRlZmF1bHQ6XHJcbiAgICAgICAgICAgIHJldHVybiBzdGF0ZTtcclxuICAgIH1cclxufSJdLCJuYW1lcyI6WyJNT1NUUkFSX0FMRVJUQSIsIkxJTVBJQVJfQUxFUlRBIiwiU1VCSVJfQVJDSElWT19FWElUTyIsIlNVQklSX0FSQ0hJVk9fRVJST1IiLCJTVUJJRU5ET19BUkNISVZPIiwiQ1JFQVJfRU5MQUNFX0VYSVRPIiwiQ1JFQVJfRU5MQUNFX0VSUk9SIiwiTElNUElBUl9TVEFURSIsIkFHUkVHQVJfUEFTU1dPUkQiLCJBR1JFR0FSX0RFU0NBUkdBUyIsInN0YXRlIiwiYWN0aW9uIiwidHlwZSIsIm1lbnNhamVfYXJjaGl2byIsInBheWxvYWQiLCJjYXJnYW5kbyIsIm5vbWJyZSIsIm5vbWJyZV9vcmlnaW5hbCIsInVybCIsImRlc2NhcmdhcyIsInBhc3N3b3JkIiwiYXV0b3IiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./context/app/appReducer.jsx\n");
+
+/***/ }),
+
+/***/ "./context/app/appState.jsx":
+/*!**********************************!*\
+  !*** ./context/app/appState.jsx ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _appContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./appContext */ \"./context/app/appContext.jsx\");\n/* harmony import */ var _appReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./appReducer */ \"./context/app/appReducer.jsx\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _config_axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../config/axios */ \"./config/axios.jsx\");\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../types */ \"./types/index.jsx\");\n\n\n\n\n\n\nconst AppState = ({ children  })=>{\n    const initialState = {\n        mensaje_archivo: null,\n        nombre: '',\n        nombre_original: '',\n        cargando: false,\n        descargas: 1,\n        password: '',\n        autor: null,\n        url: ''\n    };\n    const { 0: state , 1: dispatch  } = (0,react__WEBPACK_IMPORTED_MODULE_3__.useReducer)(_appReducer__WEBPACK_IMPORTED_MODULE_2__[\"default\"], initialState);\n    const mostrarAlerta = (msg)=>{\n        dispatch({\n            type: _types__WEBPACK_IMPORTED_MODULE_5__.MOSTRAR_ALERTA,\n            payload: msg\n        });\n        setTimeout(()=>{\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_5__.LIMPIAR_ALERTA\n            });\n        }, 2500);\n    };\n    const subirArchivo = async (formData, nombre_archivo)=>{\n        dispatch({\n            type: _types__WEBPACK_IMPORTED_MODULE_5__.SUBIENDO_ARCHIVO\n        });\n        try {\n            const result = await _config_axios__WEBPACK_IMPORTED_MODULE_4__[\"default\"].post('/api/archivos', formData);\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_5__.SUBIR_ARCHIVO_EXITO,\n                payload: {\n                    nombre: result.data.archivo,\n                    nombre_original: nombre_archivo\n                }\n            });\n        } catch (error) {\n            console.log(error);\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_5__.SUBIR_ARCHIVO_ERROR,\n                payload: error.result.data.msg\n            });\n        }\n    };\n    const crearEnalace = async ()=>{\n        const data = {\n            nombre: state.nombre,\n            nombre_original: state.nombre_original,\n            descargas: state.descargas,\n            password: state.password,\n            autor: state.autor\n        };\n        try {\n            const result = await _config_axios__WEBPACK_IMPORTED_MODULE_4__[\"default\"].post('/api/enlaces', data);\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_5__.CREAR_ENLACE_EXITO,\n                payload: result.data.msg\n            });\n        } catch (error) {\n            console.log(error);\n        }\n    };\n    const limpiarState = async ()=>{\n        dispatch({\n            type: _types__WEBPACK_IMPORTED_MODULE_5__.LIMPIAR_STATE\n        });\n    };\n    const agregarPassword = (password)=>{\n        dispatch({\n            type: _types__WEBPACK_IMPORTED_MODULE_5__.AGREGAR_PASSWORD,\n            payload: password\n        });\n    };\n    const agregarDescargas = (descargas)=>{\n        dispatch({\n            type: _types__WEBPACK_IMPORTED_MODULE_5__.AGREGAR_DESCARGAS,\n            payload: descargas\n        });\n    };\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_appContext__WEBPACK_IMPORTED_MODULE_1__[\"default\"].Provider, {\n        value: {\n            mostrarAlerta,\n            mensaje_archivo: state.mensaje_archivo,\n            subirArchivo,\n            nombre: state.nombre,\n            nombre_original: state.nombre_original,\n            cargando: state.cargando,\n            crearEnalace,\n            descargas: state.descargas,\n            password: state.password,\n            autor: state.autor,\n            url: state.url,\n            limpiarState,\n            agregarPassword,\n            agregarDescargas\n        },\n        children: children\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Maikol\\\\Desktop\\\\NodeSend\\\\nodesendclient\\\\context\\\\app\\\\appState.jsx\",\n        lineNumber: 107,\n        columnNumber: 9\n    }, undefined));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AppState);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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LFlBQVksYUFBZSxDQUFDO1FBQzlCakIsUUFBUSxDQUFDLENBQUM7WUFDTkcsSUFBSSxFQUFFbEIsaURBQWE7UUFDdkIsQ0FBQztJQUNMLENBQUM7SUFFRCxLQUFLLENBQUNpQyxlQUFlLElBQUd0QixRQUFRLEdBQUksQ0FBQztRQUNqQ0ksUUFBUSxDQUFDLENBQUM7WUFDTkcsSUFBSSxFQUFFakIsb0RBQWdCO1lBQ3RCa0IsT0FBTyxFQUFFUixRQUFRO1FBQ3JCLENBQUM7SUFDTCxDQUFDO0lBRUQsS0FBSyxDQUFDdUIsZ0JBQWdCLElBQUd4QixTQUFTLEdBQUksQ0FBQztRQUNuQ0ssUUFBUSxDQUFDLENBQUM7WUFDTkcsSUFBSSxFQUFFaEIscURBQWlCO1lBQ3ZCaUIsT0FBTyxFQUFFVCxTQUFTO1FBQ3RCLENBQUM7SUFDTCxDQUFDO0lBRUQsTUFBTSw2RUFDRHJCLDREQUFtQjtRQUFDK0MsS0FBSyxFQUFFLENBQUM7WUFDekJwQixhQUFhO1lBQ2JWLGVBQWUsRUFBRVEsS0FBSyxDQUFDUixlQUFlO1lBQ3RDZSxZQUFZO1lBQ1pkLE1BQU0sRUFBRU8sS0FBSyxDQUFDUCxNQUFNO1lBQ3BCQyxlQUFlLEVBQUVNLEtBQUssQ0FBQ04sZUFBZTtZQUN0Q0MsUUFBUSxFQUFFSyxLQUFLLENBQUNMLFFBQVE7WUFDeEJzQixZQUFZO1lBQ1pyQixTQUFTLEVBQUVJLEtBQUssQ0FBQ0osU0FBUztZQUMxQkMsUUFBUSxFQUFFRyxLQUFLLENBQUNILFFBQVE7WUFDeEJDLEtBQUssRUFBRUUsS0FBSyxDQUFDRixLQUFLO1lBQ2xCQyxHQUFHLEVBQUVDLEtBQUssQ0FBQ0QsR0FBRztZQUNkbUIsWUFBWTtZQUNaQyxlQUFlO1lBQ2ZDLGdCQUFnQjtRQUNwQixDQUFDO2tCQUNJOUIsUUFBUTs7Ozs7O0FBR3JCLENBQUM7QUFFRCxpRUFBZUQsUUFBUSxFQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbm9kZXNlbmRjbGllbnQvLi9jb250ZXh0L2FwcC9hcHBTdGF0ZS5qc3g/YTU1OSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgYXBwQ29udGV4dCBmcm9tICcuL2FwcENvbnRleHQnO1xyXG5pbXBvcnQgYXBwUmVkdWNlciBmcm9tICcuL2FwcFJlZHVjZXInO1xyXG5pbXBvcnQgeyB1c2VSZWR1Y2VyIH0gZnJvbSAncmVhY3QnO1xyXG5pbXBvcnQgY2xpZW50QXhpb3MgZnJvbSAnLi4vLi4vY29uZmlnL2F4aW9zJztcclxuaW1wb3J0IHtcclxuICAgIE1PU1RSQVJfQUxFUlRBLFxyXG4gICAgTElNUElBUl9BTEVSVEEsXHJcbiAgICBTVUJJUl9BUkNISVZPX0VYSVRPLFxyXG4gICAgU1VCSVJfQVJDSElWT19FUlJPUixcclxuICAgIFNVQklFTkRPX0FSQ0hJVk8sXHJcbiAgICBDUkVBUl9FTkxBQ0VfRVhJVE8sXHJcbiAgICBDUkVBUl9FTkxBQ0VfRVJST1IsXHJcbiAgICBMSU1QSUFSX1NUQVRFLFxyXG4gICAgQUdSRUdBUl9QQVNTV09SRCxcclxuICAgIEFHUkVHQVJfREVTQ0FSR0FTXHJcbn0gZnJvbSAnLi4vLi4vdHlwZXMnO1xyXG5cclxuY29uc3QgQXBwU3RhdGUgPSAoe2NoaWxkcmVufSkgPT4ge1xyXG4gICAgY29uc3QgaW5pdGlhbFN0YXRlID0ge1xyXG4gICAgICAgIG1lbnNhamVfYXJjaGl2bzogbnVsbCxcclxuICAgICAgICBub21icmU6ICcnLFxyXG4gICAgICAgIG5vbWJyZV9vcmlnaW5hbDogJycsXHJcbiAgICAgICAgY2FyZ2FuZG86IGZhbHNlLFxyXG4gICAgICAgIGRlc2NhcmdhczogMSxcclxuICAgICAgICBwYXNzd29yZDogJycsXHJcbiAgICAgICAgYXV0b3I6IG51bGwsXHJcbiAgICAgICAgdXJsOiAnJyxcclxuICAgIH1cclxuXHJcbiAgICBjb25zdCBbc3RhdGUsIGRpc3BhdGNoXSA9IHVzZVJlZHVjZXIoYXBwUmVkdWNlciwgaW5pdGlhbFN0YXRlKTtcclxuXHJcbiAgICBjb25zdCBtb3N0cmFyQWxlcnRhID0gbXNnID0+IHtcclxuICAgICAgICBkaXNwYXRjaCh7XHJcbiAgICAgICAgICAgIHR5cGU6IE1PU1RSQVJfQUxFUlRBLFxyXG4gICAgICAgICAgICBwYXlsb2FkOiBtc2csXHJcbiAgICAgICAgfSk7XHJcbiAgICAgICAgc2V0VGltZW91dCgoKSA9PiB7XHJcbiAgICAgICAgICAgIGRpc3BhdGNoKHtcclxuICAgICAgICAgICAgICAgIHR5cGU6IExJTVBJQVJfQUxFUlRBLFxyXG4gICAgICAgICAgICB9KTtcclxuICAgICAgICB9LCAyNTAwKTtcclxuICAgIH1cclxuICAgIFxyXG4gICAgY29uc3Qgc3ViaXJBcmNoaXZvID0gYXN5bmMgKGZvcm1EYXRhLCBub21icmVfYXJjaGl2bykgPT4ge1xyXG4gICAgICAgIGRpc3BhdGNoKHtcclxuICAgICAgICAgICAgdHlwZTogU1VCSUVORE9fQVJDSElWTyxcclxuICAgICAgICB9KTtcclxuXHJcbiAgICAgICAgdHJ5IHtcclxuICAgICAgICAgICAgY29uc3QgcmVzdWx0ID0gYXdhaXQgY2xpZW50QXhpb3MucG9zdCgnL2FwaS9hcmNoaXZvcycsIGZvcm1EYXRhKTtcclxuICAgICAgICAgICAgZGlzcGF0Y2goe1xyXG4gICAgICAgICAgICAgICAgdHlwZTogU1VCSVJfQVJDSElWT19FWElUTyxcclxuICAgICAgICAgICAgICAgIHBheWxvYWQ6IHtcclxuICAgICAgICAgICAgICAgICAgICBub21icmU6IHJlc3VsdC5kYXRhLmFyY2hpdm8sXHJcbiAgICAgICAgICAgICAgICAgICAgbm9tYnJlX29yaWdpbmFsOiBub21icmVfYXJjaGl2b1xyXG4gICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICB9KTtcclxuICAgICAgICB9IGNhdGNoIChlcnJvcikge1xyXG4gICAgICAgICAgICBjb25zb2xlLmxvZyhlcnJvcik7XHJcbiAgICAgICAgICAgIGRpc3BhdGNoKHtcclxuICAgICAgICAgICAgICAgIHR5cGU6IFNVQklSX0FSQ0hJVk9fRVJST1IsXHJcbiAgICAgICAgICAgICAgICBwYXlsb2FkOiBlcnJvci5yZXN1bHQuZGF0YS5tc2dcclxuICAgICAgICAgICAgfSk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIGNvbnN0IGNyZWFyRW5hbGFjZSA9IGFzeW5jICgpID0+IHtcclxuICAgICAgICBjb25zdCBkYXRhID0ge1xyXG4gICAgICAgICAgICBub21icmU6IHN0YXRlLm5vbWJyZSxcclxuICAgICAgICAgICAgbm9tYnJlX29yaWdpbmFsOiBzdGF0ZS5ub21icmVfb3JpZ2luYWwsXHJcbiAgICAgICAgICAgIGRlc2Nhcmdhczogc3RhdGUuZGVzY2FyZ2FzLFxyXG4gICAgICAgICAgICBwYXNzd29yZDogc3RhdGUucGFzc3dvcmQsXHJcbiAgICAgICAgICAgIGF1dG9yOiBzdGF0ZS5hdXRvclxyXG4gICAgICAgIH1cclxuICAgICAgICB0cnkge1xyXG4gICAgICAgICAgICBjb25zdCByZXN1bHQgPSBhd2FpdCBjbGllbnRBeGlvcy5wb3N0KCcvYXBpL2VubGFjZXMnLCBkYXRhKTtcclxuICAgICAgICAgICAgZGlzcGF0Y2goe1xyXG4gICAgICAgICAgICAgICAgdHlwZTogQ1JFQVJfRU5MQUNFX0VYSVRPLFxyXG4gICAgICAgICAgICAgICAgcGF5bG9hZDogcmVzdWx0LmRhdGEubXNnXHJcbiAgICAgICAgICAgIH0pXHJcbiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgY29uc29sZS5sb2coZXJyb3IpO1xyXG4gICAgICAgIH1cclxuICAgIH1cclxuXHJcbiAgICBjb25zdCBsaW1waWFyU3RhdGUgPSBhc3luYyAoKSA9PiB7XHJcbiAgICAgICAgZGlzcGF0Y2goe1xyXG4gICAgICAgICAgICB0eXBlOiBMSU1QSUFSX1NUQVRFLFxyXG4gICAgICAgIH0pO1xyXG4gICAgfVxyXG5cclxuICAgIGNvbnN0IGFncmVnYXJQYXNzd29yZCA9IHBhc3N3b3JkID0+IHtcclxuICAgICAgICBkaXNwYXRjaCh7XHJcbiAgICAgICAgICAgIHR5cGU6IEFHUkVHQVJfUEFTU1dPUkQsXHJcbiAgICAgICAgICAgIHBheWxvYWQ6IHBhc3N3b3JkXHJcbiAgICAgICAgfSlcclxuICAgIH1cclxuXHJcbiAgICBjb25zdCBhZ3JlZ2FyRGVzY2FyZ2FzID0gZGVzY2FyZ2FzID0+IHtcclxuICAgICAgICBkaXNwYXRjaCh7XHJcbiAgICAgICAgICAgIHR5cGU6IEFHUkVHQVJfREVTQ0FSR0FTLFxyXG4gICAgICAgICAgICBwYXlsb2FkOiBkZXNjYXJnYXNcclxuICAgICAgICB9KVxyXG4gICAgfVxyXG5cclxuICAgIHJldHVybihcclxuICAgICAgICA8YXBwQ29udGV4dC5Qcm92aWRlciB2YWx1ZT17e1xyXG4gICAgICAgICAgICBtb3N0cmFyQWxlcnRhLFxyXG4gICAgICAgICAgICBtZW5zYWplX2FyY2hpdm86IHN0YXRlLm1lbnNhamVfYXJjaGl2byxcclxuICAgICAgICAgICAgc3ViaXJBcmNoaXZvLFxyXG4gICAgICAgICAgICBub21icmU6IHN0YXRlLm5vbWJyZSxcclxuICAgICAgICAgICAgbm9tYnJlX29yaWdpbmFsOiBzdGF0ZS5ub21icmVfb3JpZ2luYWwsXHJcbiAgICAgICAgICAgIGNhcmdhbmRvOiBzdGF0ZS5jYXJnYW5kbyxcclxuICAgICAgICAgICAgY3JlYXJFbmFsYWNlLFxyXG4gICAgICAgICAgICBkZXNjYXJnYXM6IHN0YXRlLmRlc2NhcmdhcyxcclxuICAgICAgICAgICAgcGFzc3dvcmQ6IHN0YXRlLnBhc3N3b3JkLFxyXG4gICAgICAgICAgICBhdXRvcjogc3RhdGUuYXV0b3IsXHJcbiAgICAgICAgICAgIHVybDogc3RhdGUudXJsLFxyXG4gICAgICAgICAgICBsaW1waWFyU3RhdGUsXHJcbiAgICAgICAgICAgIGFncmVnYXJQYXNzd29yZCxcclxuICAgICAgICAgICAgYWdyZWdhckRlc2Nhcmdhc1xyXG4gICAgICAgIH19PlxyXG4gICAgICAgICAgICB7Y2hpbGRyZW59XHJcbiAgICAgICAgPC9hcHBDb250ZXh0LlByb3ZpZGVyPlxyXG4gICAgKVxyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBBcHBTdGF0ZTsiXSwibmFtZXMiOlsiYXBwQ29udGV4dCIsImFwcFJlZHVjZXIiLCJ1c2VSZWR1Y2VyIiwiY2xpZW50QXhpb3MiLCJNT1NUUkFSX0FMRVJUQSIsIkxJTVBJQVJfQUxFUlRBIiwiU1VCSVJfQVJDSElWT19FWElUTyIsIlNVQklSX0FSQ0hJVk9fRVJST1IiLCJTVUJJRU5ET19BUkNISVZPIiwiQ1JFQVJfRU5MQUNFX0VYSVRPIiwiQ1JFQVJfRU5MQUNFX0VSUk9SIiwiTElNUElBUl9TVEFURSIsIkFHUkVHQVJfUEFTU1dPUkQiLCJBR1JFR0FSX0RFU0NBUkdBUyIsIkFwcFN0YXRlIiwiY2hpbGRyZW4iLCJpbml0aWFsU3RhdGUiLCJtZW5zYWplX2FyY2hpdm8iLCJub21icmUiLCJub21icmVfb3JpZ2luYWwiLCJjYXJnYW5kbyIsImRlc2NhcmdhcyIsInBhc3N3b3JkIiwiYXV0b3IiLCJ1cmwiLCJzdGF0ZSIsImRpc3BhdGNoIiwibW9zdHJhckFsZXJ0YSIsIm1zZyIsInR5cGUiLCJwYXlsb2FkIiwic2V0VGltZW91dCIsInN1YmlyQXJjaGl2byIsImZvcm1EYXRhIiwibm9tYnJlX2FyY2hpdm8iLCJyZXN1bHQiLCJwb3N0IiwiZGF0YSIsImFyY2hpdm8iLCJlcnJvciIsImNvbnNvbGUiLCJsb2ciLCJjcmVhckVuYWxhY2UiLCJsaW1waWFyU3RhdGUiLCJhZ3JlZ2FyUGFzc3dvcmQiLCJhZ3JlZ2FyRGVzY2FyZ2FzIiwiUHJvdmlkZXIiLCJ2YWx1ZSJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./context/app/appState.jsx\n");
+
+/***/ }),
+
+/***/ "./context/auth/authContext.jsx":
+/*!**************************************!*\
+  !*** ./context/auth/authContext.jsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nconst AuthContext = /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AuthContext);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb250ZXh0L2F1dGgvYXV0aENvbnRleHQuanN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7OztBQUFtQztBQUVuQyxLQUFLLENBQUNDLFdBQVcsaUJBQUdELG9EQUFhO0FBRWpDLGlFQUFlQyxXQUFXLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ub2Rlc2VuZGNsaWVudC8uL2NvbnRleHQvYXV0aC9hdXRoQ29udGV4dC5qc3g/MjJmYiJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQge2NyZWF0ZUNvbnRleHR9IGZyb20gJ3JlYWN0JztcclxuXHJcbmNvbnN0IEF1dGhDb250ZXh0ID0gY3JlYXRlQ29udGV4dCgpO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgQXV0aENvbnRleHQ7Il0sIm5hbWVzIjpbImNyZWF0ZUNvbnRleHQiLCJBdXRoQ29udGV4dCJdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./context/auth/authContext.jsx\n");
+
+/***/ }),
+
+/***/ "./context/auth/authReducer.jsx":
+/*!**************************************!*\
+  !*** ./context/auth/authReducer.jsx ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../types */ \"./types/index.jsx\");\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((state, action)=>{\n    switch(action.type){\n        case _types__WEBPACK_IMPORTED_MODULE_0__.REGISTRO_EXISTOSO:\n            return {\n                ...state,\n                msg: action.payload\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.USUARIO_YA_EXISTE:\n        case _types__WEBPACK_IMPORTED_MODULE_0__.INICIO_ERROR:\n            return {\n                ...state,\n                msg: action.payload\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.LIMPIAR_ALERTA:\n            return {\n                ...state,\n                msg: action.payload\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.INICIO_EXISTO:\n            localStorage.setItem('token', action.payload);\n            return {\n                ...state,\n                token: action.payload,\n                isAuthenticated: true\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.USUARIO_AUTENTICADO:\n            return {\n                ...state,\n                user: action.payload,\n                isAuthenticated: true\n            };\n        case _types__WEBPACK_IMPORTED_MODULE_0__.CERRAR_SESION:\n            localStorage.removeItem('token');\n            return {\n                ...state,\n                token: null,\n                user: null,\n                isAuthenticated: false\n            };\n        default:\n            return state;\n    }\n});\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9jb250ZXh0L2F1dGgvYXV0aFJlZHVjZXIuanN4LmpzIiwibWFwcGluZ3MiOiI7Ozs7O0FBT29CO0FBRXBCLGlFQUFnQixDQUFBTyxLQUFLLEVBQUVDLE1BQU0sR0FBSyxDQUFDO0lBQy9CLE1BQU0sQ0FBRUEsTUFBTSxDQUFDQyxJQUFJO1FBQ2YsSUFBSSxDQUFDVCxxREFBaUI7WUFDbEIsTUFBTSxDQUFDLENBQUM7bUJBQ0RPLEtBQUs7Z0JBQ1JHLEdBQUcsRUFBRUYsTUFBTSxDQUFDRyxPQUFPO1lBQ3ZCLENBQUM7UUFDTCxJQUFJLENBQUNWLHFEQUFpQjtRQUN0QixJQUFJLENBQUNHLGdEQUFZO1lBQ2IsTUFBTSxDQUFDLENBQUM7bUJBQ0RHLEtBQUs7Z0JBQ1JHLEdBQUcsRUFBRUYsTUFBTSxDQUFDRyxPQUFPO1lBQ3ZCLENBQUM7UUFDTCxJQUFJLENBQUNULGtEQUFjO1lBQ2YsTUFBTSxDQUFDLENBQUM7bUJBQ0RLLEtBQUs7Z0JBQ1JHLEdBQUcsRUFBRUYsTUFBTSxDQUFDRyxPQUFPO1lBQ3ZCLENBQUM7UUFDTCxJQUFJLENBQUNSLGlEQUFhO1lBQ2RTLFlBQVksQ0FBQ0MsT0FBTyxDQUFDLENBQU8sUUFBRUwsTUFBTSxDQUFDRyxPQUFPO1lBQzVDLE1BQU0sQ0FBQyxDQUFDO21CQUNESixLQUFLO2dCQUNSTyxLQUFLLEVBQUVOLE1BQU0sQ0FBQ0csT0FBTztnQkFDckJJLGVBQWUsRUFBRSxJQUFJO1lBQ3pCLENBQUM7UUFDTCxJQUFJLENBQUNWLHVEQUFtQjtZQUNwQixNQUFNLENBQUMsQ0FBQzttQkFDREUsS0FBSztnQkFDUlMsSUFBSSxFQUFFUixNQUFNLENBQUNHLE9BQU87Z0JBQ3BCSSxlQUFlLEVBQUUsSUFBSTtZQUN6QixDQUFDO1FBQ0wsSUFBSSxDQUFDVCxpREFBYTtZQUNkTSxZQUFZLENBQUNLLFVBQVUsQ0FBQyxDQUFPO1lBQy9CLE1BQU0sQ0FBQyxDQUFDO21CQUNEVixLQUFLO2dCQUNSTyxLQUFLLEVBQUUsSUFBSTtnQkFDWEUsSUFBSSxFQUFFLElBQUk7Z0JBQ1ZELGVBQWUsRUFBRSxLQUFLO1lBQzFCLENBQUM7O1lBRUQsTUFBTSxDQUFDUixLQUFLOztBQUV4QixDQUFDIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vbm9kZXNlbmRjbGllbnQvLi9jb250ZXh0L2F1dGgvYXV0aFJlZHVjZXIuanN4PzcyOTYiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHtSRUdJU1RST19FWElTVE9TTywgXHJcbiAgICAgICAgVVNVQVJJT19ZQV9FWElTVEUsXHJcbiAgICAgICAgTElNUElBUl9BTEVSVEEsXHJcbiAgICAgICAgSU5JQ0lPX0VYSVNUTyxcclxuICAgICAgICBJTklDSU9fRVJST1IsXHJcbiAgICAgICAgVVNVQVJJT19BVVRFTlRJQ0FETyxcclxuICAgICAgICBDRVJSQVJfU0VTSU9OXHJcbn0gZnJvbSAnLi4vLi4vdHlwZXMnO1xyXG5cclxuZXhwb3J0IGRlZmF1bHQgKHN0YXRlLCBhY3Rpb24pID0+IHtcclxuICAgIHN3aXRjaCAoYWN0aW9uLnR5cGUpIHtcclxuICAgICAgICBjYXNlIFJFR0lTVFJPX0VYSVNUT1NPOlxyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXHJcbiAgICAgICAgICAgICAgICBtc2c6IGFjdGlvbi5wYXlsb2FkXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBjYXNlIFVTVUFSSU9fWUFfRVhJU1RFOlxyXG4gICAgICAgIGNhc2UgSU5JQ0lPX0VSUk9SOlxyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXHJcbiAgICAgICAgICAgICAgICBtc2c6IGFjdGlvbi5wYXlsb2FkXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBjYXNlIExJTVBJQVJfQUxFUlRBOlxyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXHJcbiAgICAgICAgICAgICAgICBtc2c6IGFjdGlvbi5wYXlsb2FkXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBjYXNlIElOSUNJT19FWElTVE86XHJcbiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKCd0b2tlbicsIGFjdGlvbi5wYXlsb2FkKTtcclxuICAgICAgICAgICAgcmV0dXJuIHtcclxuICAgICAgICAgICAgICAgIC4uLnN0YXRlLFxyXG4gICAgICAgICAgICAgICAgdG9rZW46IGFjdGlvbi5wYXlsb2FkLFxyXG4gICAgICAgICAgICAgICAgaXNBdXRoZW50aWNhdGVkOiB0cnVlXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBjYXNlIFVTVUFSSU9fQVVURU5USUNBRE86XHJcbiAgICAgICAgICAgIHJldHVybiB7XHJcbiAgICAgICAgICAgICAgICAuLi5zdGF0ZSxcclxuICAgICAgICAgICAgICAgIHVzZXI6IGFjdGlvbi5wYXlsb2FkLFxyXG4gICAgICAgICAgICAgICAgaXNBdXRoZW50aWNhdGVkOiB0cnVlXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBjYXNlIENFUlJBUl9TRVNJT046XHJcbiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpO1xyXG4gICAgICAgICAgICByZXR1cm4ge1xyXG4gICAgICAgICAgICAgICAgLi4uc3RhdGUsXHJcbiAgICAgICAgICAgICAgICB0b2tlbjogbnVsbCxcclxuICAgICAgICAgICAgICAgIHVzZXI6IG51bGwsXHJcbiAgICAgICAgICAgICAgICBpc0F1dGhlbnRpY2F0ZWQ6IGZhbHNlXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICBkZWZhdWx0OlxyXG4gICAgICAgICAgICByZXR1cm4gc3RhdGU7XHJcbiAgICB9XHJcbn0iXSwibmFtZXMiOlsiUkVHSVNUUk9fRVhJU1RPU08iLCJVU1VBUklPX1lBX0VYSVNURSIsIkxJTVBJQVJfQUxFUlRBIiwiSU5JQ0lPX0VYSVNUTyIsIklOSUNJT19FUlJPUiIsIlVTVUFSSU9fQVVURU5USUNBRE8iLCJDRVJSQVJfU0VTSU9OIiwic3RhdGUiLCJhY3Rpb24iLCJ0eXBlIiwibXNnIiwicGF5bG9hZCIsImxvY2FsU3RvcmFnZSIsInNldEl0ZW0iLCJ0b2tlbiIsImlzQXV0aGVudGljYXRlZCIsInVzZXIiLCJyZW1vdmVJdGVtIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./context/auth/authReducer.jsx\n");
+
+/***/ }),
+
+/***/ "./context/auth/authState.jsx":
+/*!************************************!*\
+  !*** ./context/auth/authState.jsx ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _authContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./authContext */ \"./context/auth/authContext.jsx\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _authReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./authReducer */ \"./context/auth/authReducer.jsx\");\n/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../types */ \"./types/index.jsx\");\n/* harmony import */ var _config_axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../config/axios */ \"./config/axios.jsx\");\n/* harmony import */ var _config_tokenAuth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../config/tokenAuth */ \"./config/tokenAuth.jsx\");\n\n\n\n\n\n\n\nconst AuthState = ({ children  })=>{\n    const initialState = {\n        token:  false ? 0 : '',\n        isAuthenticated: null,\n        user: null,\n        loading: true,\n        error: null,\n        msg: null\n    };\n    const { 0: state , 1: dispatch  } = (0,react__WEBPACK_IMPORTED_MODULE_2__.useReducer)(_authReducer__WEBPACK_IMPORTED_MODULE_3__[\"default\"], initialState);\n    //registro de usuarios\n    const registroUsuario = async (datos)=>{\n        try {\n            const respuesta = await _config_axios__WEBPACK_IMPORTED_MODULE_5__[\"default\"].post('/api/usuarios', datos);\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_4__.REGISTRO_EXISTOSO,\n                payload: respuesta.data.msg\n            });\n        } catch (error) {\n            console.log(error);\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_4__.USUARIO_YA_EXISTE,\n                payload: error.response.data.msg\n            });\n        }\n        setTimeout(()=>{\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_4__.LIMPIAR_ALERTA,\n                payload: null\n            });\n        }, 3000);\n    };\n    const iniciarSesion = async (datos)=>{\n        try {\n            const respuesta = await _config_axios__WEBPACK_IMPORTED_MODULE_5__[\"default\"].post('/api/auth', datos);\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_4__.INICIO_EXISTO,\n                payload: respuesta.data.token\n            });\n        } catch (error) {\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_4__.INICIO_ERROR,\n                payload: error.response.data.msg\n            });\n        }\n        setTimeout(()=>{\n            dispatch({\n                type: _types__WEBPACK_IMPORTED_MODULE_4__.LIMPIAR_ALERTA,\n                payload: null\n            });\n        }, 2500);\n    };\n    //retorna el usuario autenticado al recargar en base al TOKEN JWT   en localStorage\n    const obtenerUsuario = async ()=>{\n        const token = localStorage.getItem('token');\n        if (token) {\n            (0,_config_tokenAuth__WEBPACK_IMPORTED_MODULE_6__[\"default\"])(token);\n            try {\n                const respuesta = await _config_axios__WEBPACK_IMPORTED_MODULE_5__[\"default\"].get('/api/auth');\n                if (respuesta.data.usuario) {\n                    dispatch({\n                        type: _types__WEBPACK_IMPORTED_MODULE_4__.USUARIO_AUTENTICADO,\n                        payload: respuesta.data.usuario\n                    });\n                }\n            } catch (error) {\n                console.log(error);\n            }\n        }\n    };\n    const cerrarSesion = async ()=>{\n        dispatch({\n            type: _types__WEBPACK_IMPORTED_MODULE_4__.CERRAR_SESION\n        });\n    };\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_authContext__WEBPACK_IMPORTED_MODULE_1__[\"default\"].Provider, {\n        value: {\n            token: state.token,\n            isAuthenticated: state.isAuthenticated,\n            user: state.user,\n            loading: state.loading,\n            error: state.error,\n            msg: state.msg,\n            registroUsuario,\n            iniciarSesion,\n            obtenerUsuario,\n            cerrarSesion\n        },\n        children: children\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Maikol\\\\Desktop\\\\NodeSend\\\\nodesendclient\\\\context\\\\auth\\\\authState.jsx\",\n        lineNumber: 100,\n        columnNumber: 9\n    }, undefined));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AuthState);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,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U0FBUyxDQUFDSSxJQUFJLENBQUNRLE9BQU8sRUFBQyxDQUFDO29CQUNuQmYsUUFBUSxDQUFDLENBQUM7d0JBQ1ZLLElBQUksRUFBRTFCLHVEQUFtQjt3QkFDekIyQixPQUFPLEVBQUVILFNBQVMsQ0FBQ0ksSUFBSSxDQUFDUSxPQUFPO29CQUNuQyxDQUFDO2dCQUNMLENBQUM7WUFDTCxDQUFDLENBQUMsS0FBSyxFQUFFbEIsS0FBSyxFQUFFLENBQUM7Z0JBQ2JXLE9BQU8sQ0FBQ0MsR0FBRyxDQUFDWixLQUFLO1lBQ3JCLENBQUM7UUFDSixDQUFDO0lBQ04sQ0FBQztJQUVELEtBQUssQ0FBQ21CLFlBQVksYUFBZSxDQUFDO1FBQzlCaEIsUUFBUSxDQUFDLENBQUM7WUFDTkssSUFBSSxFQUFFcEIsaURBQWE7UUFDdkIsQ0FBQztJQUNMLENBQUM7SUFHRCxNQUFNLDZFQUNEViw2REFBb0I7UUFDckIyQyxLQUFLLEVBQUUsQ0FBQztZQUNKM0IsS0FBSyxFQUFFUSxLQUFLLENBQUNSLEtBQUs7WUFDbEJHLGVBQWUsRUFBRUssS0FBSyxDQUFDTCxlQUFlO1lBQ3RDQyxJQUFJLEVBQUVJLEtBQUssQ0FBQ0osSUFBSTtZQUNoQkMsT0FBTyxFQUFFRyxLQUFLLENBQUNILE9BQU87WUFDdEJDLEtBQUssRUFBRUUsS0FBSyxDQUFDRixLQUFLO1lBQ2xCQyxHQUFHLEVBQUVDLEtBQUssQ0FBQ0QsR0FBRztZQUNkRyxlQUFlO1lBQ2ZXLGFBQWE7WUFDYkMsY0FBYztZQUNkRyxZQUFZO1FBQ2hCLENBQUM7a0JBQ0kzQixRQUFROzs7Ozs7QUFHckIsQ0FBQztBQUVELGlFQUFlRCxTQUFTLEVBQUMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ub2Rlc2VuZGNsaWVudC8uL2NvbnRleHQvYXV0aC9hdXRoU3RhdGUuanN4PzEzOTMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IGF1dGhDb250ZXh0IGZyb20gJy4vYXV0aENvbnRleHQnO1xyXG5pbXBvcnQgUmVhY3QsIHt1c2VSZWR1Y2VyfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCBhdXRoUmVkdWNlciBmcm9tICcuL2F1dGhSZWR1Y2VyJztcclxuaW1wb3J0IHtVU1VBUklPX0FVVEVOVElDQURPLCBcclxuICAgIFJFR0lTVFJPX0VYSVNUT1NPLFxyXG4gICAgVVNVQVJJT19ZQV9FWElTVEUsXHJcbiAgICBMSU1QSUFSX0FMRVJUQSxcclxuICAgIElOSUNJT19FWElTVE8sXHJcbiAgICBJTklDSU9fRVJST1IsXHJcbiAgICBDRVJSQVJfU0VTSU9OXHJcbn0gZnJvbSAnLi4vLi4vdHlwZXMnO1xyXG5pbXBvcnQgY2xpZW50QXhpb3MgZnJvbSAnLi4vLi4vY29uZmlnL2F4aW9zJztcclxuaW1wb3J0IHRva2VuQXV0aCBmcm9tICcuLi8uLi9jb25maWcvdG9rZW5BdXRoJztcclxuXHJcblxyXG5jb25zdCBBdXRoU3RhdGUgPSAoe2NoaWxkcmVufSkgPT4ge1xyXG5cclxuICAgIGNvbnN0IGluaXRpYWxTdGF0ZSA9IHtcclxuICAgICAgICB0b2tlbjogdHlwZW9mIHdpbmRvdyAhPT0gJ3VuZGVmaW5lZCcgPyBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKSA6ICcnLFxyXG4gICAgICAgIGlzQXV0aGVudGljYXRlZDogbnVsbCxcclxuICAgICAgICB1c2VyOiBudWxsLFxyXG4gICAgICAgIGxvYWRpbmc6IHRydWUsXHJcbiAgICAgICAgZXJyb3I6IG51bGwsXHJcbiAgICAgICAgbXNnOiBudWxsLFxyXG4gICAgfTtcclxuXHJcbiAgICBjb25zdCBbc3RhdGUsIGRpc3BhdGNoXSA9IHVzZVJlZHVjZXIoYXV0aFJlZHVjZXIsIGluaXRpYWxTdGF0ZSk7XHJcblxyXG4gICAgLy9yZWdpc3RybyBkZSB1c3Vhcmlvc1xyXG4gICAgY29uc3QgcmVnaXN0cm9Vc3VhcmlvID0gYXN5bmMgKGRhdG9zKSA9PiB7XHJcbiAgICAgICAgdHJ5IHtcclxuICAgICAgICAgICAgY29uc3QgcmVzcHVlc3RhID0gYXdhaXQgY2xpZW50QXhpb3MucG9zdCgnL2FwaS91c3VhcmlvcycsIGRhdG9zKTtcclxuICAgICAgICAgICAgZGlzcGF0Y2goe1xyXG4gICAgICAgICAgICAgICAgdHlwZTogUkVHSVNUUk9fRVhJU1RPU08sXHJcbiAgICAgICAgICAgICAgICBwYXlsb2FkOiByZXNwdWVzdGEuZGF0YS5tc2dcclxuICAgICAgICAgICAgfSk7XHJcbiAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgY29uc29sZS5sb2coZXJyb3IpO1xyXG4gICAgICAgICAgICBkaXNwYXRjaCh7XHJcbiAgICAgICAgICAgICAgICB0eXBlOiBVU1VBUklPX1lBX0VYSVNURSxcclxuICAgICAgICAgICAgICAgIHBheWxvYWQ6IGVycm9yLnJlc3BvbnNlLmRhdGEubXNnXHJcbiAgICAgICAgICAgIH0pO1xyXG4gICAgICAgIH1cclxuICAgICAgICBzZXRUaW1lb3V0KCgpID0+IHtcclxuICAgICAgICAgICAgZGlzcGF0Y2goe1xyXG4gICAgICAgICAgICAgICAgdHlwZTogTElNUElBUl9BTEVSVEEsXHJcbiAgICAgICAgICAgICAgICBwYXlsb2FkOiBudWxsXHJcbiAgICAgICAgICAgIH0pO1xyXG4gICAgICAgIH0sIDMwMDApO1xyXG4gICAgfVxyXG5cclxuICAgIGNvbnN0IGluaWNpYXJTZXNpb24gPSBhc3luYyAoZGF0b3MpID0+IHtcclxuICAgICAgIHRyeSB7XHJcbiAgICAgICAgICAgIGNvbnN0IHJlc3B1ZXN0YSA9IGF3YWl0IGNsaWVudEF4aW9zLnBvc3QoJy9hcGkvYXV0aCcsIGRhdG9zKTtcclxuICAgICAgICAgICAgZGlzcGF0Y2goe1xyXG4gICAgICAgICAgICAgICAgdHlwZTogSU5JQ0lPX0VYSVNUTyxcclxuICAgICAgICAgICAgICAgIHBheWxvYWQ6IHJlc3B1ZXN0YS5kYXRhLnRva2VuXHJcbiAgICAgICAgICAgIH0pO1xyXG4gICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICBkaXNwYXRjaCh7XHJcbiAgICAgICAgICAgICAgICAgICAgdHlwZTogSU5JQ0lPX0VSUk9SLFxyXG4gICAgICAgICAgICAgICAgICAgIHBheWxvYWQ6IGVycm9yLnJlc3BvbnNlLmRhdGEubXNnXHJcbiAgICAgICAgICAgICAgfSlcclxuICAgICAgIH1cclxuICAgICAgIHNldFRpbWVvdXQoKCkgPT4ge1xyXG4gICAgICAgIGRpc3BhdGNoKHtcclxuICAgICAgICAgICAgdHlwZTogTElNUElBUl9BTEVSVEEsXHJcbiAgICAgICAgICAgIHBheWxvYWQ6IG51bGxcclxuICAgICAgICB9KVxyXG4gICAgICAgIH0sIDI1MDApO1xyXG4gICAgfVxyXG5cclxuICAgIC8vcmV0b3JuYSBlbCB1c3VhcmlvIGF1dGVudGljYWRvIGFsIHJlY2FyZ2FyIGVuIGJhc2UgYWwgVE9LRU4gSldUICAgZW4gbG9jYWxTdG9yYWdlXHJcbiAgICBjb25zdCBvYnRlbmVyVXN1YXJpbyA9IGFzeW5jICgpID0+IHtcclxuICAgICAgIGNvbnN0IHRva2VuID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Rva2VuJyk7XHJcbiAgICAgICAgIGlmICh0b2tlbikge1xyXG4gICAgICAgICAgICAgICAgdG9rZW5BdXRoKHRva2VuKTtcclxuICAgICAgICAgICAgdHJ5IHsgICBcclxuICAgICAgICAgICAgICAgIGNvbnN0IHJlc3B1ZXN0YSA9IGF3YWl0IGNsaWVudEF4aW9zLmdldCgnL2FwaS9hdXRoJyk7XHJcbiAgICAgICAgICAgICAgICBpZihyZXNwdWVzdGEuZGF0YS51c3VhcmlvKXtcclxuICAgICAgICAgICAgICAgICAgICAgICAgZGlzcGF0Y2goe1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB0eXBlOiBVU1VBUklPX0FVVEVOVElDQURPLFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBwYXlsb2FkOiByZXNwdWVzdGEuZGF0YS51c3VhcmlvXHJcbiAgICAgICAgICAgICAgICAgICAgfSlcclxuICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgfSBjYXRjaCAoZXJyb3IpIHtcclxuICAgICAgICAgICAgICAgIGNvbnNvbGUubG9nKGVycm9yKTtcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgICB9XHJcbiAgICB9XHJcblxyXG4gICAgY29uc3QgY2VycmFyU2VzaW9uID0gYXN5bmMgKCkgPT4ge1xyXG4gICAgICAgIGRpc3BhdGNoKHtcclxuICAgICAgICAgICAgdHlwZTogQ0VSUkFSX1NFU0lPTlxyXG4gICAgICAgIH0pXHJcbiAgICB9XHJcblxyXG5cclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPGF1dGhDb250ZXh0LlByb3ZpZGVyIFxyXG4gICAgICAgIHZhbHVlPXt7XHJcbiAgICAgICAgICAgIHRva2VuOiBzdGF0ZS50b2tlbixcclxuICAgICAgICAgICAgaXNBdXRoZW50aWNhdGVkOiBzdGF0ZS5pc0F1dGhlbnRpY2F0ZWQsXHJcbiAgICAgICAgICAgIHVzZXI6IHN0YXRlLnVzZXIsXHJcbiAgICAgICAgICAgIGxvYWRpbmc6IHN0YXRlLmxvYWRpbmcsXHJcbiAgICAgICAgICAgIGVycm9yOiBzdGF0ZS5lcnJvcixcclxuICAgICAgICAgICAgbXNnOiBzdGF0ZS5tc2csXHJcbiAgICAgICAgICAgIHJlZ2lzdHJvVXN1YXJpbyxcclxuICAgICAgICAgICAgaW5pY2lhclNlc2lvbixcclxuICAgICAgICAgICAgb2J0ZW5lclVzdWFyaW8sXHJcbiAgICAgICAgICAgIGNlcnJhclNlc2lvblxyXG4gICAgICAgIH19PlxyXG4gICAgICAgICAgICB7Y2hpbGRyZW59XHJcbiAgICAgICAgPC9hdXRoQ29udGV4dC5Qcm92aWRlcj5cclxuICAgIClcclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgQXV0aFN0YXRlOyJdLCJuYW1lcyI6WyJhdXRoQ29udGV4dCIsIlJlYWN0IiwidXNlUmVkdWNlciIsImF1dGhSZWR1Y2VyIiwiVVNVQVJJT19BVVRFTlRJQ0FETyIsIlJFR0lTVFJPX0VYSVNUT1NPIiwiVVNVQVJJT19ZQV9FWElTVEUiLCJMSU1QSUFSX0FMRVJUQSIsIklOSUNJT19FWElTVE8iLCJJTklDSU9fRVJST1IiLCJDRVJSQVJfU0VTSU9OIiwiY2xpZW50QXhpb3MiLCJ0b2tlbkF1dGgiLCJBdXRoU3RhdGUiLCJjaGlsZHJlbiIsImluaXRpYWxTdGF0ZSIsInRva2VuIiwibG9jYWxTdG9yYWdlIiwiZ2V0SXRlbSIsImlzQXV0aGVudGljYXRlZCIsInVzZXIiLCJsb2FkaW5nIiwiZXJyb3IiLCJtc2ciLCJzdGF0ZSIsImRpc3BhdGNoIiwicmVnaXN0cm9Vc3VhcmlvIiwiZGF0b3MiLCJyZXNwdWVzdGEiLCJwb3N0IiwidHlwZSIsInBheWxvYWQiLCJkYXRhIiwiY29uc29sZSIsImxvZyIsInJlc3BvbnNlIiwic2V0VGltZW91dCIsImluaWNpYXJTZXNpb24iLCJvYnRlbmVyVXN1YXJpbyIsImdldCIsInVzdWFyaW8iLCJjZXJyYXJTZXNpb24iLCJQcm92aWRlciIsInZhbHVlIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./context/auth/authState.jsx\n");
+
+/***/ }),
+
+/***/ "./pages/_app.js":
+/*!***********************!*\
+  !*** ./pages/_app.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/globals.css */ \"./styles/globals.css\");\n/* harmony import */ var _styles_globals_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_globals_css__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _context_auth_authState__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../context/auth/authState */ \"./context/auth/authState.jsx\");\n/* harmony import */ var _context_app_appState__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/app/appState */ \"./context/app/appState.jsx\");\n\n\n\n\nfunction MyApp({ Component , pageProps  }) {\n    return(/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_context_auth_authState__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_context_app_appState__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n                ...pageProps\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Maikol\\\\Desktop\\\\NodeSend\\\\nodesendclient\\\\pages\\\\_app.js\",\n                lineNumber: 9,\n                columnNumber: 9\n            }, this)\n        }, void 0, false, {\n            fileName: \"C:\\\\Users\\\\Maikol\\\\Desktop\\\\NodeSend\\\\nodesendclient\\\\pages\\\\_app.js\",\n            lineNumber: 8,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"C:\\\\Users\\\\Maikol\\\\Desktop\\\\NodeSend\\\\nodesendclient\\\\pages\\\\_app.js\",\n        lineNumber: 7,\n        columnNumber: 5\n    }, this));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wYWdlcy9fYXBwLmpzLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7O0FBQThCO0FBQ21CO0FBQ0g7U0FFckNFLEtBQUssQ0FBQyxDQUFDLENBQUNDLFNBQVMsR0FBRUMsU0FBUyxFQUFDLENBQUMsRUFBRSxDQUFDO0lBQ3hDLE1BQU0sNkVBQ0hKLCtEQUFTOzhGQUNQQyw2REFBUTtrR0FDTkUsU0FBUzttQkFBS0MsU0FBUzs7Ozs7Ozs7Ozs7Ozs7OztBQUloQyxDQUFDO0FBRUQsaUVBQWVGLEtBQUsiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9ub2Rlc2VuZGNsaWVudC8uL3BhZ2VzL19hcHAuanM/ZTBhZCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJy4uL3N0eWxlcy9nbG9iYWxzLmNzcydcbmltcG9ydCBBdXRoU3RhdGUgZnJvbSAnLi4vY29udGV4dC9hdXRoL2F1dGhTdGF0ZSdcbmltcG9ydCBBcHBTdGF0ZSBmcm9tICcuLi9jb250ZXh0L2FwcC9hcHBTdGF0ZSdcblxuZnVuY3Rpb24gTXlBcHAoeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9KSB7XG4gIHJldHVybiAoXG4gICAgPEF1dGhTdGF0ZT5cbiAgICAgIDxBcHBTdGF0ZT5cbiAgICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgICAgPC9BcHBTdGF0ZT5cbiAgICA8L0F1dGhTdGF0ZT5cbiAgKVxufVxuXG5leHBvcnQgZGVmYXVsdCBNeUFwcFxuIl0sIm5hbWVzIjpbIkF1dGhTdGF0ZSIsIkFwcFN0YXRlIiwiTXlBcHAiLCJDb21wb25lbnQiLCJwYWdlUHJvcHMiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./pages/_app.js\n");
+
+/***/ }),
+
+/***/ "./types/index.jsx":
+/*!*************************!*\
+  !*** ./types/index.jsx ***!
+  \*************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"USUARIO_AUTENTICADO\": () => (/* binding */ USUARIO_AUTENTICADO),\n/* harmony export */   \"LIMPIAR_ALERTA\": () => (/* binding */ LIMPIAR_ALERTA),\n/* harmony export */   \"MOSTRAR_ALERTA\": () => (/* binding */ MOSTRAR_ALERTA),\n/* harmony export */   \"REGISTRO_EXISTOSO\": () => (/* binding */ REGISTRO_EXISTOSO),\n/* harmony export */   \"USUARIO_YA_EXISTE\": () => (/* binding */ USUARIO_YA_EXISTE),\n/* harmony export */   \"INICIO_EXISTO\": () => (/* binding */ INICIO_EXISTO),\n/* harmony export */   \"INICIO_ERROR\": () => (/* binding */ INICIO_ERROR),\n/* harmony export */   \"CERRAR_SESION\": () => (/* binding */ CERRAR_SESION),\n/* harmony export */   \"SUBIENDO_ARCHIVO\": () => (/* binding */ SUBIENDO_ARCHIVO),\n/* harmony export */   \"SUBIR_ARCHIVO_EXITO\": () => (/* binding */ SUBIR_ARCHIVO_EXITO),\n/* harmony export */   \"SUBIR_ARCHIVO_ERROR\": () => (/* binding */ SUBIR_ARCHIVO_ERROR),\n/* harmony export */   \"CREAR_ENLACE_EXITO\": () => (/* binding */ CREAR_ENLACE_EXITO),\n/* harmony export */   \"CREAR_ENLACE_ERROR\": () => (/* binding */ CREAR_ENLACE_ERROR),\n/* harmony export */   \"LIMPIAR_STATE\": () => (/* binding */ LIMPIAR_STATE),\n/* harmony export */   \"AGREGAR_PASSWORD\": () => (/* binding */ AGREGAR_PASSWORD),\n/* harmony export */   \"AGREGAR_DESCARGAS\": () => (/* binding */ AGREGAR_DESCARGAS)\n/* harmony export */ });\nconst USUARIO_AUTENTICADO = 'USUARIO_AUTENTICADO';\nconst LIMPIAR_ALERTA = 'LIMPIAR_ALERTA';\nconst MOSTRAR_ALERTA = 'MOSTRAR_ALERTA';\nconst REGISTRO_EXISTOSO = 'REGISTRO_EXISTOSO';\nconst USUARIO_YA_EXISTE = 'USUARIO_YA_EXISTE';\nconst INICIO_EXISTO = 'INICIO_EXISTO';\nconst INICIO_ERROR = 'INICIO_ERROR';\nconst CERRAR_SESION = 'CERRAR_SESION';\nconst SUBIENDO_ARCHIVO = 'SUBIENDO_ARCHIVO';\nconst SUBIR_ARCHIVO_EXITO = 'SUBIR_ARCHIVO_EXITO';\nconst SUBIR_ARCHIVO_ERROR = 'SUBIR_ARCHIVO_ERROR';\nconst CREAR_ENLACE_EXITO = 'CREAR_ENLACE_EXITO';\nconst CREAR_ENLACE_ERROR = 'CREAR_ENLACE_ERROR';\nconst LIMPIAR_STATE = 'LIMPIAR_STATE';\nconst AGREGAR_PASSWORD = 'AGREGAR_PASSWORD';\nconst AGREGAR_DESCARGAS = 'AGREGAR_DESCARGAS';\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi90eXBlcy9pbmRleC5qc3guanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFPLEtBQUssQ0FBQ0EsbUJBQW1CLEdBQUcsQ0FBcUI7QUFDakQsS0FBSyxDQUFDQyxjQUFjLEdBQUcsQ0FBZ0I7QUFDdkMsS0FBSyxDQUFDQyxjQUFjLEdBQUcsQ0FBZ0I7QUFDdkMsS0FBSyxDQUFDQyxpQkFBaUIsR0FBRyxDQUFtQjtBQUM3QyxLQUFLLENBQUNDLGlCQUFpQixHQUFHLENBQW1CO0FBQzdDLEtBQUssQ0FBQ0MsYUFBYSxHQUFHLENBQWU7QUFDckMsS0FBSyxDQUFDQyxZQUFZLEdBQUcsQ0FBYztBQUNuQyxLQUFLLENBQUNDLGFBQWEsR0FBRyxDQUFlO0FBRXJDLEtBQUssQ0FBQ0MsZ0JBQWdCLEdBQUcsQ0FBa0I7QUFDM0MsS0FBSyxDQUFDQyxtQkFBbUIsR0FBRyxDQUFxQjtBQUNqRCxLQUFLLENBQUNDLG1CQUFtQixHQUFHLENBQXFCO0FBRWpELEtBQUssQ0FBQ0Msa0JBQWtCLEdBQUcsQ0FBb0I7QUFDL0MsS0FBSyxDQUFDQyxrQkFBa0IsR0FBRyxDQUFvQjtBQUUvQyxLQUFLLENBQUNDLGFBQWEsR0FBRyxDQUFlO0FBRXJDLEtBQUssQ0FBQ0MsZ0JBQWdCLEdBQUcsQ0FBa0I7QUFDM0MsS0FBSyxDQUFDQyxpQkFBaUIsR0FBRyxDQUFtQiIsInNvdXJjZXMiOlsid2VicGFjazovL25vZGVzZW5kY2xpZW50Ly4vdHlwZXMvaW5kZXguanN4PzhkYjgiXSwic291cmNlc0NvbnRlbnQiOlsiZXhwb3J0IGNvbnN0IFVTVUFSSU9fQVVURU5USUNBRE8gPSAnVVNVQVJJT19BVVRFTlRJQ0FETyc7XHJcbmV4cG9ydCBjb25zdCBMSU1QSUFSX0FMRVJUQSA9ICdMSU1QSUFSX0FMRVJUQSc7XHJcbmV4cG9ydCBjb25zdCBNT1NUUkFSX0FMRVJUQSA9ICdNT1NUUkFSX0FMRVJUQSc7XHJcbmV4cG9ydCBjb25zdCBSRUdJU1RST19FWElTVE9TTyA9ICdSRUdJU1RST19FWElTVE9TTyc7XHJcbmV4cG9ydCBjb25zdCBVU1VBUklPX1lBX0VYSVNURSA9ICdVU1VBUklPX1lBX0VYSVNURSc7XHJcbmV4cG9ydCBjb25zdCBJTklDSU9fRVhJU1RPID0gJ0lOSUNJT19FWElTVE8nO1xyXG5leHBvcnQgY29uc3QgSU5JQ0lPX0VSUk9SID0gJ0lOSUNJT19FUlJPUic7XHJcbmV4cG9ydCBjb25zdCBDRVJSQVJfU0VTSU9OID0gJ0NFUlJBUl9TRVNJT04nO1xyXG5cclxuZXhwb3J0IGNvbnN0IFNVQklFTkRPX0FSQ0hJVk8gPSAnU1VCSUVORE9fQVJDSElWTyc7XHJcbmV4cG9ydCBjb25zdCBTVUJJUl9BUkNISVZPX0VYSVRPID0gJ1NVQklSX0FSQ0hJVk9fRVhJVE8nO1xyXG5leHBvcnQgY29uc3QgU1VCSVJfQVJDSElWT19FUlJPUiA9ICdTVUJJUl9BUkNISVZPX0VSUk9SJztcclxuXHJcbmV4cG9ydCBjb25zdCBDUkVBUl9FTkxBQ0VfRVhJVE8gPSAnQ1JFQVJfRU5MQUNFX0VYSVRPJztcclxuZXhwb3J0IGNvbnN0IENSRUFSX0VOTEFDRV9FUlJPUiA9ICdDUkVBUl9FTkxBQ0VfRVJST1InO1xyXG5cclxuZXhwb3J0IGNvbnN0IExJTVBJQVJfU1RBVEUgPSAnTElNUElBUl9TVEFURSc7XHJcblxyXG5leHBvcnQgY29uc3QgQUdSRUdBUl9QQVNTV09SRCA9ICdBR1JFR0FSX1BBU1NXT1JEJztcclxuZXhwb3J0IGNvbnN0IEFHUkVHQVJfREVTQ0FSR0FTID0gJ0FHUkVHQVJfREVTQ0FSR0FTJzsiXSwibmFtZXMiOlsiVVNVQVJJT19BVVRFTlRJQ0FETyIsIkxJTVBJQVJfQUxFUlRBIiwiTU9TVFJBUl9BTEVSVEEiLCJSRUdJU1RST19FWElTVE9TTyIsIlVTVUFSSU9fWUFfRVhJU1RFIiwiSU5JQ0lPX0VYSVNUTyIsIklOSUNJT19FUlJPUiIsIkNFUlJBUl9TRVNJT04iLCJTVUJJRU5ET19BUkNISVZPIiwiU1VCSVJfQVJDSElWT19FWElUTyIsIlNVQklSX0FSQ0hJVk9fRVJST1IiLCJDUkVBUl9FTkxBQ0VfRVhJVE8iLCJDUkVBUl9FTkxBQ0VfRVJST1IiLCJMSU1QSUFSX1NUQVRFIiwiQUdSRUdBUl9QQVNTV09SRCIsIkFHUkVHQVJfREVTQ0FSR0FTIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./types/index.jsx\n");
+
+/***/ }),
+
+/***/ "./styles/globals.css":
+/*!****************************!*\
+  !*** ./styles/globals.css ***!
+  \****************************/
+/***/ (() => {
+
 
 
 /***/ }),
 
-/***/ 2324:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-const appContext = /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (appContext);
-
-
-/***/ }),
-
-/***/ 8216:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Z": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6689);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-const AuthContext = /*#__PURE__*/ (0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AuthContext);
-
-
-/***/ }),
-
-/***/ 8394:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ _app)
-});
-
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: ./context/auth/authContext.jsx
-var authContext = __webpack_require__(8216);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(6689);
-;// CONCATENATED MODULE: ./types/index.jsx
-const USUARIO_AUTENTICADO = 'USUARIO_AUTENTICADO';
-const LIMPIAR_ALERTA = 'LIMPIAR_ALERTA';
-const MOSTRAR_ALERTA = 'MOSTRAR_ALERTA';
-const REGISTRO_EXISTOSO = 'REGISTRO_EXISTOSO';
-const USUARIO_YA_EXISTE = 'USUARIO_YA_EXISTE';
-const INICIO_EXISTO = 'INICIO_EXISTO';
-const INICIO_ERROR = 'INICIO_ERROR';
-const CERRAR_SESION = 'CERRAR_SESION';
-const SUBIENDO_ARCHIVO = 'SUBIENDO_ARCHIVO';
-const SUBIR_ARCHIVO_EXITO = 'SUBIR_ARCHIVO_EXITO';
-const SUBIR_ARCHIVO_ERROR = 'SUBIR_ARCHIVO_ERROR';
-const CREAR_ENLACE_EXITO = 'CREAR_ENLACE_EXITO';
-const CREAR_ENLACE_ERROR = 'CREAR_ENLACE_ERROR';
-const LIMPIAR_STATE = 'LIMPIAR_STATE';
-const AGREGAR_PASSWORD = 'AGREGAR_PASSWORD';
-const AGREGAR_DESCARGAS = 'AGREGAR_DESCARGAS';
-
-;// CONCATENATED MODULE: ./context/auth/authReducer.jsx
-
-/* harmony default export */ const authReducer = ((state, action)=>{
-    switch(action.type){
-        case REGISTRO_EXISTOSO:
-            return {
-                ...state,
-                msg: action.payload
-            };
-        case USUARIO_YA_EXISTE:
-        case INICIO_ERROR:
-            return {
-                ...state,
-                msg: action.payload
-            };
-        case LIMPIAR_ALERTA:
-            return {
-                ...state,
-                msg: action.payload
-            };
-        case INICIO_EXISTO:
-            localStorage.setItem('token', action.payload);
-            return {
-                ...state,
-                token: action.payload,
-                isAuthenticated: true
-            };
-        case USUARIO_AUTENTICADO:
-            return {
-                ...state,
-                user: action.payload,
-                isAuthenticated: true
-            };
-        case CERRAR_SESION:
-            localStorage.removeItem('token');
-            return {
-                ...state,
-                token: null,
-                user: null,
-                isAuthenticated: false
-            };
-        default:
-            return state;
-    }
-});
-
-// EXTERNAL MODULE: ./config/axios.jsx + 1 modules
-var axios = __webpack_require__(5908);
-;// CONCATENATED MODULE: ./config/tokenAuth.jsx
-
-const tokenAuth = (token)=>{
-    if (token) {
-        axios/* default.defaults.headers.common.Authorization */.Z.defaults.headers.common.Authorization = `Bearer ${token}`;
-    } else {
-        delete axios/* default.defaults.headers.common.Authorization */.Z.defaults.headers.common.Authorization;
-    }
-};
-/* harmony default export */ const config_tokenAuth = (tokenAuth);
-
-;// CONCATENATED MODULE: ./context/auth/authState.jsx
-
-
-
-
-
-
-
-const AuthState = ({ children  })=>{
-    const initialState = {
-        token:  false ? 0 : '',
-        isAuthenticated: null,
-        user: null,
-        loading: true,
-        error: null,
-        msg: null
-    };
-    const { 0: state , 1: dispatch  } = (0,external_react_.useReducer)(authReducer, initialState);
-    //registro de usuarios
-    const registroUsuario = async (datos)=>{
-        try {
-            const respuesta = await axios/* default.post */.Z.post('/api/usuarios', datos);
-            dispatch({
-                type: REGISTRO_EXISTOSO,
-                payload: respuesta.data.msg
-            });
-        } catch (error) {
-            console.log(error);
-            dispatch({
-                type: USUARIO_YA_EXISTE,
-                payload: error.response.data.msg
-            });
-        }
-        setTimeout(()=>{
-            dispatch({
-                type: LIMPIAR_ALERTA,
-                payload: null
-            });
-        }, 3000);
-    };
-    const iniciarSesion = async (datos)=>{
-        try {
-            const respuesta = await axios/* default.post */.Z.post('/api/auth', datos);
-            dispatch({
-                type: INICIO_EXISTO,
-                payload: respuesta.data.token
-            });
-        } catch (error) {
-            dispatch({
-                type: INICIO_ERROR,
-                payload: error.response.data.msg
-            });
-        }
-        setTimeout(()=>{
-            dispatch({
-                type: LIMPIAR_ALERTA,
-                payload: null
-            });
-        }, 2500);
-    };
-    //retorna el usuario autenticado al recargar en base al TOKEN JWT   en localStorage
-    const obtenerUsuario = async ()=>{
-        const token = localStorage.getItem('token');
-        if (token) {
-            config_tokenAuth(token);
-            try {
-                const respuesta = await axios/* default.get */.Z.get('/api/auth');
-                if (respuesta.data.usuario) {
-                    dispatch({
-                        type: USUARIO_AUTENTICADO,
-                        payload: respuesta.data.usuario
-                    });
-                }
-            } catch (error) {
-                console.log(error);
-            }
-        }
-    };
-    const cerrarSesion = async ()=>{
-        dispatch({
-            type: CERRAR_SESION
-        });
-    };
-    return(/*#__PURE__*/ jsx_runtime_.jsx(authContext/* default.Provider */.Z.Provider, {
-        value: {
-            token: state.token,
-            isAuthenticated: state.isAuthenticated,
-            user: state.user,
-            loading: state.loading,
-            error: state.error,
-            msg: state.msg,
-            registroUsuario,
-            iniciarSesion,
-            obtenerUsuario,
-            cerrarSesion
-        },
-        children: children
-    }));
-};
-/* harmony default export */ const authState = (AuthState);
-
-// EXTERNAL MODULE: ./context/app/appContext.jsx
-var appContext = __webpack_require__(2324);
-;// CONCATENATED MODULE: ./context/app/appReducer.jsx
-
-/* harmony default export */ const appReducer = ((state, action)=>{
-    switch(action.type){
-        case MOSTRAR_ALERTA:
-            return {
-                ...state,
-                mensaje_archivo: action.payload
-            };
-        case LIMPIAR_ALERTA:
-            return {
-                ...state,
-                mensaje_archivo: null
-            };
-        case SUBIENDO_ARCHIVO:
-            return {
-                ...state,
-                cargando: true
-            };
-        case SUBIR_ARCHIVO_EXITO:
-            return {
-                ...state,
-                nombre: action.payload.nombre,
-                nombre_original: action.payload.nombre_original,
-                cargando: false
-            };
-        case SUBIR_ARCHIVO_ERROR:
-            return {
-                ...state,
-                mensaje_archivo: action.payload,
-                cargando: false
-            };
-        case CREAR_ENLACE_EXITO:
-            return {
-                ...state,
-                url: action.payload
-            };
-        case LIMPIAR_STATE:
-            return {
-                ...state,
-                mensaje_archivo: null,
-                nombre: '',
-                nombre_original: '',
-                cargando: false,
-                descargas: 1,
-                password: '',
-                autor: null,
-                url: ''
-            };
-        case AGREGAR_PASSWORD:
-            return {
-                ...state,
-                password: action.payload
-            };
-        case AGREGAR_DESCARGAS:
-            return {
-                ...state,
-                descargas: action.payload
-            };
-        default:
-            return state;
-    }
-});
-
-;// CONCATENATED MODULE: ./context/app/appState.jsx
-
-
-
-
-
-
-const AppState = ({ children  })=>{
-    const initialState = {
-        mensaje_archivo: null,
-        nombre: '',
-        nombre_original: '',
-        cargando: false,
-        descargas: 1,
-        password: '',
-        autor: null,
-        url: ''
-    };
-    const { 0: state , 1: dispatch  } = (0,external_react_.useReducer)(appReducer, initialState);
-    const mostrarAlerta = (msg)=>{
-        dispatch({
-            type: MOSTRAR_ALERTA,
-            payload: msg
-        });
-        setTimeout(()=>{
-            dispatch({
-                type: LIMPIAR_ALERTA
-            });
-        }, 2500);
-    };
-    const subirArchivo = async (formData, nombre_archivo)=>{
-        dispatch({
-            type: SUBIENDO_ARCHIVO
-        });
-        try {
-            const result = await axios/* default.post */.Z.post('/api/archivos', formData);
-            dispatch({
-                type: SUBIR_ARCHIVO_EXITO,
-                payload: {
-                    nombre: result.data.archivo,
-                    nombre_original: nombre_archivo
-                }
-            });
-        } catch (error) {
-            console.log(error);
-            dispatch({
-                type: SUBIR_ARCHIVO_ERROR,
-                payload: error.result.data.msg
-            });
-        }
-    };
-    const crearEnalace = async ()=>{
-        const data = {
-            nombre: state.nombre,
-            nombre_original: state.nombre_original,
-            descargas: state.descargas,
-            password: state.password,
-            autor: state.autor
-        };
-        try {
-            const result = await axios/* default.post */.Z.post('/api/enlaces', data);
-            dispatch({
-                type: CREAR_ENLACE_EXITO,
-                payload: result.data.msg
-            });
-        } catch (error) {
-            console.log(error);
-        }
-    };
-    const limpiarState = async ()=>{
-        dispatch({
-            type: LIMPIAR_STATE
-        });
-    };
-    const agregarPassword = (password)=>{
-        dispatch({
-            type: AGREGAR_PASSWORD,
-            payload: password
-        });
-    };
-    const agregarDescargas = (descargas)=>{
-        dispatch({
-            type: AGREGAR_DESCARGAS,
-            payload: descargas
-        });
-    };
-    return(/*#__PURE__*/ jsx_runtime_.jsx(appContext/* default.Provider */.Z.Provider, {
-        value: {
-            mostrarAlerta,
-            mensaje_archivo: state.mensaje_archivo,
-            subirArchivo,
-            nombre: state.nombre,
-            nombre_original: state.nombre_original,
-            cargando: state.cargando,
-            crearEnalace,
-            descargas: state.descargas,
-            password: state.password,
-            autor: state.autor,
-            url: state.url,
-            limpiarState,
-            agregarPassword,
-            agregarDescargas
-        },
-        children: children
-    }));
-};
-/* harmony default export */ const appState = (AppState);
-
-;// CONCATENATED MODULE: ./pages/_app.js
-
-
-
-
-function MyApp({ Component , pageProps  }) {
-    return(/*#__PURE__*/ jsx_runtime_.jsx(authState, {
-        children: /*#__PURE__*/ jsx_runtime_.jsx(appState, {
-            children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-                ...pageProps
-            })
-        })
-    }));
-}
-/* harmony default export */ const _app = (MyApp);
-
-
-/***/ }),
-
-/***/ 6689:
+/***/ "axios":
+/*!************************!*\
+  !*** external "axios" ***!
+  \************************/
 /***/ ((module) => {
 
+"use strict";
+module.exports = require("axios");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
 module.exports = require("react");
 
 /***/ }),
 
-/***/ 997:
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
 /***/ ((module) => {
 
-module.exports = require("react/jsx-runtime");
+"use strict";
+module.exports = require("react/jsx-dev-runtime");
 
 /***/ })
 
@@ -466,7 +172,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(8394));
+var __webpack_exports__ = (__webpack_exec__("./pages/_app.js"));
 module.exports = __webpack_exports__;
 
 })();
