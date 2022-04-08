@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import Layout from '../components/Layout'
 import Dropzone from '../components/Dropzone'
@@ -19,6 +17,7 @@ export default function Home() {
     if (token) {
       obtenerUsuario();
     }
+      // eslint-disable-next-line
   }, []);
 
   return (
@@ -44,7 +43,7 @@ export default function Home() {
                 <span className="font-bold text-redline">ReactNodeSend</span>, incluye cifrado de archivos y protección con contraseña, te permite enviar archivos <strong>(de 0MB hasta 1MB)</strong> de forma segura. Cuando subes un archivo, React Node Send genera un enlace que puedes compartir con el recipiente. Para más seguridad, también tienes la opción de establecer una contraseña y cambiar la configuración de N° de descargas admitidas.
               </p>
               {!isAuthenticated ? (
-                <Link href="/crearcuenta">
+                <Link href="/crearcuenta" passHref>
                 <a className="font-bold text-redline text-clamp hover:text-black transition-all duration-300 ease-in-out">Crear una cuenta para proteger archivos</a>
               </Link>
               ) : null}

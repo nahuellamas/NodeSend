@@ -19,7 +19,7 @@ const Dropzone = () => {
         const formData = new FormData(); //cramos el objeto form-data
         formData.append('archivo', acceptedFiles[0]); //agregamos el archivo al form-data
         subirArchivo(formData, acceptedFiles[0].name); //enviamos el form-data al backend
-    }, [] );
+    }, [subirArchivo] );
 
     const {getRootProps, getInputProps, isDragActive, acceptedFiles} = useDropzone({onDropAccepted, onDropRejected, maxSize: 1000000});
 

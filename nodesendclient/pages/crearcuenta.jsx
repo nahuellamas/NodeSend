@@ -5,7 +5,8 @@ import * as Yup from 'yup'
 import { useContext, useEffect} from 'react'
 import authContext from '../context/auth/authContext'
 import Alerta from '../components/Alerta'
-const crearcuenta = () => {
+
+const Crearcuenta = () => {
     const AuthContext = useContext(authContext)
     const {msg, registroUsuario} = AuthContext;
 
@@ -41,7 +42,7 @@ const crearcuenta = () => {
           <h2 className="text-4xl font-sans font-bold text-gray-800 text-center my-2">Crea tu Cuenta</h2>
           <p className="font-sm font-sans font-bold text-gray-600 text-center mb-4">Accede a todos los beneficios.</p>
 
-          {msg && <Alerta msg={msg} />}
+          {msg ? <Alerta /> : null}
 
           <div className="flex justify-center mt-5">
             <div className="w-full max-w-lg mx-5">
@@ -86,7 +87,7 @@ const crearcuenta = () => {
                   <button type="submit" className="bg-redline w-1/2 rounded p-2  font-bold text-clamp uppercase hover:bg-black ease-in-out duration-300 text-white">
                     Crear Cuenta
                   </button>
-                  <Link href="/login">
+                  <Link href="/login" passHref>
                     <button type="button" className=" w-1/2 rounded p-2  font-bold text-clamp uppercase hover:text-black ease-in-out duration-300 text-gray-600">
                       Iniciar Sesion
                     </button>
@@ -100,4 +101,4 @@ const crearcuenta = () => {
   )
 }
 
-export default crearcuenta
+export default Crearcuenta

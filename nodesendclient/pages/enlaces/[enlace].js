@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout';
 import Alerta from '../../components/Alerta';
-import clientAxios from '../../config/Axios';
+import clientAxios from '../../config/axios';
 import React, {useState} from 'react';
 import appContext from '../../context/app/appContext';
 import { useContext } from 'react';
@@ -17,16 +17,16 @@ export async function getServerSideProps({params}) {
 }
 
 export async function getServerSidePaths() {
-        const enlaces = await clientAxios.get('/api/enlaces');
+        const ServerEnlaces = await clientAxios.get('/api/enlaces');
         return {
-            paths: enlaces.data.enlaces.map( enlace => ( {
+            paths: ServerEnlaces.data.enlaces.map( enlace => ( {
                 params: { enlace : enlace.url }
             })),
             fallback: false
         }
 }
 
-export default ({enlace}) => {
+const Enlaces = ({enlace}) => {
     const [tienepassword, setTienePassword] = useState(enlace.password);
     const [password, setPassword] = useState('');
 
@@ -76,3 +76,5 @@ export default ({enlace}) => {
         </Layout>
     )
 }
+
+export default Enlaces;

@@ -17,7 +17,7 @@ const Header = () => {
 
   useEffect(() => {
     obtenerUsuario();
-  }, []);
+  }, [obtenerUsuario]);
 
   const redirect = () => {
     router.push('/')
@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className="py-8 flex flex-col md:flex-row items-center justify-between">
-        <Image onClick={() => redirect()} className="mb-8 sm:mb-4 cursor-pointer"src="/favicon.svg" width={400} height={100} />
+        <Image alt="favicon" onClick={() => redirect()} className="mb-8 sm:mb-4 cursor-pointer"src="/favicon.svg" width={400} height={100} />
       
 
         <div className="flex gap-3">

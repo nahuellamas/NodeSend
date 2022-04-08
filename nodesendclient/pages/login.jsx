@@ -7,7 +7,7 @@ import authContext from '../context/auth/authContext'
 import Alerta from '../components/Alerta'
 import {useRouter} from 'next/router'
 
-const login = () => {
+const Login = () => {
     const AuthContext = useContext(authContext);
     const {iniciarSesion, msg, isAuthenticated} = AuthContext;
     const router = useRouter();
@@ -15,6 +15,7 @@ const login = () => {
         if (isAuthenticated) {
           router.push('/');
         }
+          // eslint-disable-next-line
     }, [isAuthenticated]);
 
   const formik = useFormik({
@@ -75,7 +76,7 @@ const login = () => {
                   <button type="submit" className="bg-redline w-1/2 rounded p-2  font-bold text-clamp uppercase hover:bg-black ease-in-out duration-300 text-white">
                       Iniciar Sesión
                   </button>
-                  <Link href="/crearcuenta">
+                  <Link href="/crearcuenta" passHref>
                     <button type="button" className=" w-1/2 rounded p-2  font-bold text-clamp uppercase hover:text-black ease-in-out duration-300 text-gray-600">
                       Registrarse
                     </button>
@@ -89,4 +90,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login
